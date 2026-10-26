@@ -1,6 +1,20 @@
 # Cs2-ManualMap-Injector
 It's up to date and working manual map injector
 
+Examples:
+
+```powershell
+# Default target: cs2.exe
+.\cs2-manual-map.exe C:\lab\payload.dll
+
+# Select an exact PID if multiple candidates exist
+.\cs2-manual-map.exe C:\lab\payload.dll --pid 12345
+
+# Benign smoke test in Notepad; inspect with DebugView or a debugger
+start notepad.exe
+.\cs2-manual-map.exe .\manual-map-test.dll --process notepad.exe
+```
+
 ## Implemented PE handling
 
 - Strict PE32+/AMD64/DLL validation and checked image bounds
